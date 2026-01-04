@@ -10,15 +10,15 @@ permissions:
 jobs:
   issue-labeled:
     permissions:
-      issues: write  # for actions-cool/issues-helper to update issues
-      pull-requests: write  # for actions-cool/issues-helper to update PRs
+      issues: write # for actions-cool/issues-helper to update issues
+      pull-requests: write # for actions-cool/issues-helper to update PRs
     runs-on: ubuntu-latest
     steps:
       - name: Cannot Replicate
         if: "${{ github.event.label.name == 'Resolution: Cannot Replicate'}}"
         uses: actions-cool/issues-helper@v3
         with:
-          actions: 'create-comment'
+          actions: "create-comment"
           token: ${{ secrets.GITHUB_TOKEN }}
           issue-number: ${{ github.event.issue.number }}
           body: |
@@ -27,7 +27,7 @@ jobs:
         if: "${{ github.event.label.name == 'Resolution: Duplicate'}}"
         uses: actions-cool/issues-helper@v3
         with:
-          actions: 'create-comment'
+          actions: "create-comment"
           token: ${{ secrets.GITHUB_TOKEN }}
           issue-number: ${{ github.event.issue.number }}
           body: |
@@ -36,7 +36,7 @@ jobs:
         if: "${{ github.event.label.name == 'Status: Needs Reproducer'}}"
         uses: actions-cool/issues-helper@v3
         with:
-          actions: 'create-comment'
+          actions: "create-comment"
           token: ${{ secrets.GITHUB_TOKEN }}
           issue-number: ${{ github.event.issue.number }}
           body: |

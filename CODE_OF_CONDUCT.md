@@ -13,12 +13,14 @@ and harassment-free experience for all contributors.
 ## Our Standards
 
 Examples of behavior that contribute to a positive environment include:
+
 - Using welcoming and inclusive language
 - Being respectful of differing viewpoints and experiences
 - Giving and accepting constructive feedback
 - Focusing on what is best for the community
 
 Examples of unacceptable behavior include:
+
 - Harassment, discrimination, or personal attacks
 - Trolling or insulting comments
 - Publishing private information without consent

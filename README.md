@@ -11,7 +11,7 @@ OOM analysis, and cgroup-aware insights.
 ## Why this project exists
 
 Traditional tools like `top`, `htop`, and metrics exporters are excellent at showing
-*what* is happening on a system, but they often fall short in explaining *why*.
+_what_ is happening on a system, but they often fall short in explaining _why_.
 
 This project focuses on **understanding Linux behavior**, not just displaying numbers.
 
@@ -51,6 +51,7 @@ See [`docs/architecture.md`](docs/architecture.md) for details.
 git clone https://github.com/Coderxrohan/control-pulse.git
 cd control-pulse
 ```
+
 ## Contributors
 
 <!-- ALL-CONTRIBUTORS-LIST:START -->

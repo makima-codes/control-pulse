@@ -6,6 +6,7 @@ Control Pulse is a Linux-focused process and resource monitoring system designed
 to move beyond surface-level metrics and provide **explainable insights into system behavior**.
 
 Instead of only reporting current CPU or memory usage, Control Pulse focuses on:
+
 - Process lifecycle behavior
 - Resource usage trends
 - Failure and anomaly detection
@@ -20,7 +21,7 @@ modularity, and real-world observability challenges.
 
 The architecture is designed to achieve the following goals:
 
-- Explain *why* a system behaves the way it does, not just *what* it is doing
+- Explain _why_ a system behaves the way it does, not just _what_ it is doing
 - Favor trends and lifecycle analysis over instantaneous snapshots
 - Be container- and cgroup-aware by design
 - Remain lightweight, modular, and extensible
@@ -55,7 +56,6 @@ v
 | /proc, /sys, cgroups, logs |
 +--------------------------------+
 
-
 Each layer communicates through well-defined data structures and contracts.
 
 ---
@@ -69,12 +69,14 @@ The Collector layer gathers low-level system data directly from Linux interfaces
 in a read-only and non-intrusive manner.
 
 **Primary Data Sources:**
+
 - `/proc` — process statistics, memory, CPU usage
 - `/sys` — system and hardware information
 - cgroup filesystem — container resource limits and accounting
 - Kernel logs — OOM and system failure signals
 
 **Key Responsibilities:**
+
 - Discover and track active processes (PID management)
 - Detect process creation, termination, and zombie states
 - Sample CPU, memory, and I/O usage
@@ -91,6 +93,7 @@ The Collector layer is intentionally kept lightweight and stateless where possib
 The Analyzer layer transforms raw system data into **actionable insights**.
 
 **Core Capabilities:**
+
 - Process lifecycle analysis (birth → execution → termination)
 - Trend-based CPU and memory usage analysis
 - Detection of abnormal behavior (spikes, leaks, runaway processes)
@@ -107,6 +110,7 @@ The Analyzer prioritizes **patterns over time** rather than single data points.
 The CLI layer presents insights to users in a clear, concise, and operator-friendly manner.
 
 **Design Principles:**
+
 - Minimal but meaningful output
 - Emphasis on explanations instead of raw metrics
 - Clear severity indicators for abnormal conditions
@@ -173,8 +177,8 @@ The architecture supports future extensions without major refactoring:
 
 ## Summary
 
-Control Pulse is designed to help engineers understand *why* Linux systems behave
-the way they do, not just *what* they are doing.
+Control Pulse is designed to help engineers understand _why_ Linux systems behave
+the way they do, not just _what_ they are doing.
 
 By focusing on process lifecycles, trends, and failure analysis, the architecture
 reflects real-world production concerns and aligns with modern Linux and
